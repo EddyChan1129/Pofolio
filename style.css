@@ -5,13 +5,19 @@
   box-sizing: border-box;
 }
 
+:root{
+  --background-color:#1f242d;
+  --second-color:#323946;
+  --main-color:#0fff;
+  --text-color:#0ef;
+}
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: #080808;
-  color: #fff;
+  background: var(--background-color);
+  color: var(--main-color);
 }
 
 #header {
