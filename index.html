@@ -17,20 +17,19 @@
 </head>
 
 <body>
+    <nav id="test">
+        <img src="./images/logo.png" class="logo">
+        <ul id="sidemenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <i class="fas fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
     <div id="header">
         <div class="container">
-            <nav id="test">
-                <img src="./images/logo.png" class="logo">
-                <ul id="sidemenu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <i class="fas fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-
             <div class="header-text">
                 <p>HI! I'M</p>
                 <h1>Eddy<br>CHAN</h1>
@@ -214,7 +213,7 @@
         function myFunction() {
             if (window.pageYOffset >= sticky) {
                 navbar.classList.add("sticky")
-            } 
+            }
         }
 
     </script>

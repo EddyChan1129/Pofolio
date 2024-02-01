@@ -29,7 +29,8 @@ body {
   background-position: center;
 }
 
-.container {
+.container,
+nav {
   padding: 10px 10%;
 }
 
