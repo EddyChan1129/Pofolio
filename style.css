@@ -9,11 +9,12 @@
   --background-color: #1f242d;
   --second-color: #323946;
   --text-color: #fff;
-  --main-color: #0ef;
+  --main-color: #6ee7b7;
 }
 
 html {
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
 body {
@@ -27,11 +28,12 @@ body {
   background-image: url(./images/user.png);
   background-size: cover;
   background-position: center;
+  align-items: center;
 }
 
 .container,
 nav {
-  padding: 10px 10%;
+  padding: 1rem 10%;
 }
 
 nav {
@@ -41,7 +43,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  background: #080808;
+  background: var(--background-color);
 }
 
 .logo {
@@ -51,13 +53,13 @@ nav {
 nav ul li {
   display: inline-block;
   list-style: none;
-  margin: 10px 20px;
+  margin: 1rem 2rem;
 }
 
 nav ul li a {
-  color: #fff;
+  color: var(--text-color);
   text-decoration: none;
-  font-size: 22px;
+  font-size: 2.2rem;
   position: relative;
   transition: 0.2s;
 }
@@ -65,12 +67,16 @@ nav ul li a {
 nav ul li a::after {
   content: "";
   width: 0;
-  height: 3px;
-  background: #ffe84f;
+  height: 0.3rem;
+  background: var(--main-color);
   position: absolute;
   left: 0px;
-  bottom: -8px;
+  bottom: -0.8rem;
   transition: 0.5s;
+}
+
+nav ul li a:hover {
+  color: var(--main-color);
 }
 
 nav ul li a:hover::after {
@@ -79,26 +85,26 @@ nav ul li a:hover::after {
 
 .header-text {
   margin-top: 20%;
-  font-size: 30px;
+  font-size: 3rem;
 }
 
 .header-text h1 {
-  font-size: 60px;
-  margin-top: 20px;
+  font-size: 6rem;
+  margin-top: 2rem;
 }
 
 .header-text p {
-  color: #ffe84f;
+  color: var(--main-color);
 }
 
 .header-text h1 span {
-  color: #ffe84f;
+  color: var(--main-color);
 }
 
 /*------------------------about-------------------------------*/
 
 #about {
-  padding: 80px 0;
+  padding: 8rem 0;
   color: #ababab;
 }
 
@@ -114,7 +120,7 @@ nav ul li a:hover::after {
 
 .about-col-1 img {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 1.5rem;
 }
 
 .about-col-2 {
@@ -128,17 +134,17 @@ nav ul li a:hover::after {
 }
 
 .sub-title p {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .tab-titles {
   display: flex;
-  margin: 20px 0 40px;
+  margin: 2rem 0 4rem;
 }
 
 .tab-links {
-  margin-right: 50px;
-  font-size: 18px;
+  margin-right: 5rem;
+  font-size: 1.8rem;
   font-weight: 500;
   cursor: pointer;
   position: relative;
@@ -147,11 +153,11 @@ nav ul li a:hover::after {
 .tab-links::after {
   content: "";
   width: 0;
-  height: 3px;
+  height: 0.3rem;
   background: #6ee7b7;
   position: absolute;
   left: 0;
-  bottom: -8px;
+  bottom: -0.8rem;
   transition: 0.5s;
 }
 
@@ -161,12 +167,12 @@ nav ul li a:hover::after {
 
 .tab-contents ul li {
   list-style: none;
-  margin: 10px 0;
+  margin: 1rem 0;
 }
 
 .tab-contents ul li span {
-  color: #b54769;
-  font-size: 14px;
+  color: var(--main-color);
+  font-size: 1.4rem;
 }
 
 .tab-contents {
@@ -180,41 +186,41 @@ nav ul li a:hover::after {
 /*------------------------services-------------------------------*/
 
 #services {
-  padding: 30px 0;
+  padding: 3rem 0;
 }
 
 .services-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 40px;
-  margin-top: 50px;
+  grid-gap: 4rem;
+  margin-top: 5rem;
 }
 
 .services-list div {
-  background: #262626;
-  padding: 40px;
-  font-size: 13px;
+  background: var(--second-color);
+  padding: 4rem;
+  font-size: 1.3rem;
   font-weight: 300;
-  border-radius: 10px;
+  border-radius: 1rem;
   transition: background 0.5s, transform 0.5s;
 }
 
 .services-list div i {
-  font-size: 50px;
-  margin-bottom: 30px;
+  font-size: 5rem;
+  margin-bottom: 3rem;
 }
 
 .services-list div h2 {
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: 500;
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 }
 
 .services-list div a {
   text-decoration: none;
   color: #fff;
-  font-size: 12px;
-  margin-top: 20px;
+  font-size: 1.2rem;
+  margin-top: 2rem;
   display: inline-block;
 }
 
@@ -231,20 +237,20 @@ nav ul li a:hover::after {
 
 .work-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 40px;
-  margin-top: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(2.5rem, 1fr));
+  grid-gap: 4rem;
+  margin-top: 5rem;
 }
 
 .work {
-  border-radius: 10px;
+  border-radius: 1rem;
   position: relative;
   overflow: hidden;
 }
 
 .work img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 1rem;
   display: block;
   transition: transform 0.5s;
 }
@@ -253,7 +259,7 @@ nav ul li a:hover::after {
   width: 100%;
   height: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
-  border-radius: 10px;
+  border-radius: 1rem;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -261,27 +267,27 @@ nav ul li a:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 40px;
+  padding: 0 4rem;
   text-align: center;
   flex-direction: column;
-  font-size: 14px;
+  font-size: 1.4rem;
   transition: height 0.5s;
 }
 
 .layer h3 {
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .layer a {
-  margin-top: 20px;
+  margin-top: 2rem;
   color: #ffe84f;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 60px;
   background: #fff;
-  width: 60px;
-  height: 60px;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
   text-align: center;
 }
@@ -296,11 +302,11 @@ nav ul li a:hover::after {
 
 .btn {
   display: block;
-  margin: 50px auto;
+  margin: 5rem auto;
   width: fit-content;
   border: 1px solid #ff004f;
-  padding: 14px 50px;
-  border-radius: 6px;
+  padding: 1.4rem 5rem;
+  border-radius: 0.6rem;
   text-decoration: none;
   color: #fff;
   transition: background 0.5s;
@@ -321,23 +327,23 @@ nav ul li a:hover::after {
 }
 
 .contact-left p {
-  margin-top: 30px;
+  margin-top: 3rem;
 }
 
 .contact-left p i {
   color: #ff004f;
-  margin-right: 15px;
-  font-size: 25px;
+  margin-right: 1.25rem;
+  font-size: 2.5rem;
 }
 
 .social-icons {
-  margin-top: 30px;
+  margin-top: 3rem;
 }
 
 .social-icons a {
   text-decoration: none;
-  font-size: 30px;
-  margin-right: 15px;
+  font-size: 3rem;
+  margin-right: 1.5rem;
   color: #ababab;
   display: inline-block;
   transition: transform 0.5s;
@@ -363,27 +369,27 @@ form textarea {
   border: 0;
   outline: none;
   background: #262626;
-  padding: 15px;
-  margin: 15px 0;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
   color: #fff;
-  font-size: 18px;
-  border-radius: 6px;
+  font-size: 1.8rem;
+  border-radius: 0.6rem;
 }
 
 form .btn2 {
-  padding: 14px 60px;
-  font-size: 18px;
-  margin-top: 20px;
+  padding: 1.4rem 6rem;
+  font-size: 1.8rem;
+  margin-top: 2rem;
   cursor: pointer;
 }
 
 .copyright {
   width: 100%;
   text-align: center;
-  padding: 25px 0;
+  padding: 2.5rem 0;
   background: #262626;
   font-weight: 300;
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 
 /*------------------------mobile-------------------------------*/
@@ -401,44 +407,44 @@ nav .fas {
 
   .header-text {
     margin-top: 100%;
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 
   .header-text h1 {
-    font-size: 30px;
+    font-size: 3rem;
   }
 
   nav .fas {
     display: block;
-    font-size: 25px;
+    font-size: 2.5rem;
   }
 
   nav ul {
     background: #ff004f;
     position: fixed;
     top: 0;
-    right: -200px;
-    width: 200px;
+    right: -2rem;
+    width: 2rem;
     height: 100vh;
-    padding-top: 50px;
+    padding-top: 5rem;
     z-index: 2;
     transition: right 0.5s;
   }
 
   nav ul li {
     display: block;
-    margin: 25px;
+    margin: 2.5rem;
   }
 
   nav ul .fas {
     position: absolute;
-    top: 25px;
-    left: 25px;
+    top: 2.5rem;
+    left: 2.5rem;
     cursor: pointer;
   }
 
   .sub-title {
-    font-size: 40px;
+    font-size: 4rem;
   }
 
   .about-col-1,
@@ -447,16 +453,16 @@ nav .fas {
   }
 
   .about-col-1 {
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
   }
 
   .about-col-2 {
-    font-size: 14px;
+    font-size: 1.4rem;
   }
 
   .tab-links {
-    font-size: 16px;
-    margin-right: 20px;
+    font-size: 1.6rem;
+    margin-right: 2rem;
   }
 
   .contact-left,
@@ -465,6 +471,6 @@ nav .fas {
   }
 
   .copyright {
-    font-size: 14px;
+    font-size: 1.4rem;
   }
 }
