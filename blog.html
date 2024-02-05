@@ -9,6 +9,7 @@
 
     <!-- Google Fonts style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="./images/logo.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
 
@@ -17,22 +18,21 @@
 </head>
 
 <body>
-    <div class="container">
-        <nav>
-            <img src="./images/logo.png" class="logo">
-            <ul id="sidemenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <i class="fas fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
-            </ul>
-            <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
-    </div>
+    <nav>
+        <img src="./images/logo.png" class="logo">
+        <ul id="sidemenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">about</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="skill.html">skill</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <i class="fas fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
 
     <!------------------------------------blog----------------------------------->
-    <div id="services">
+    <!-- <div id="services">
         <div class="container">
             <h1 class="sub-title">Blog</h1>
             <div class="services-list">
@@ -62,25 +62,149 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <script>
 
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+    <section id="blog">
+        <div class="blog-container">
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img src="./images/bgc-3.png" alt="">
+                </div>
+                <div class="blog-text">
+                    <span>5-2 Feb 2024 / Web design and application</span>
+                    <a href="#" class="blog-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci
+                        tenetur maiores
+                        delectus </a>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolor debitis, velit nisi et,
+                        necessitatibus ducimus sunt recusandae voluptate alias neque enim error ab, possimus odit animi
+                        maxime nam deleniti!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolor
+                        debitis, velit nisi et, necessitatibus ducimus sunt recusandae voluptate alias neque enim error
+                        ab,
+                        possimus odit animi maxime nam deleniti!
+                    </p>
 
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
+                    <b class="read-more">Read More</b><br>
+                    <span class="read-little">Read Little</span>
+                </div>
+            </div>
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img width="500" src="./images/bgc-2.png" alt="">
+                </div>
+                <div class="blog-text">
+                    <span>5-2 Feb 2024 / Web design and application</span>
+                    <a href="#" class="blog-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci
+                        tenetur maiores
+                        delectus </a>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolor debitis, velit nisi et,
+                        necessitatibus ducimus sunt recusandae voluptate alias neque enim error ab, possimus odit animi
+                        maxime nam deleniti!
+                    </p>
 
-    </script>
+                    <b class="read-more">Read More</b><br>
+                    <span class="read-little">Read Little</span>
+                </div>
+            </div>
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img width="500" src=" ./images/bgc-4.png" alt="">
+                </div>
+                <div class="blog-text">
+                    <span>5-2 Feb 2024 / Web design and application</span>
+                    <a href="#" class="blog-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci
+                        tenetur maiores
+                        delectus </a>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolor debitis, velit nisi et,
+                        necessitatibus ducimus sunt recusandae voluptate alias neque enim error ab, possimus odit animi
+                        maxime nam deleniti!
+                    </p>
+
+                    <b class="read-more">Read More</b><br>
+                    <span class="read-little">Read Little</span>
+                </div>
+            </div>
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img width="500" src="./images/bgc-2.png" alt="">
+                </div>
+                <div class="blog-text">
+                    <span>5-2 Feb 2024 / Web design and application</span>
+                    <a href="#" class="blog-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci
+                        tenetur maiores
+                        delectus </a>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolor debitis, velit nisi et,
+                        necessitatibus ducimus sunt recusandae voluptate alias neque enim error ab, possimus odit animi
+                        maxime nam deleniti!
+                    </p>
+
+                    <b class="read-more">Read More</b><br>
+                    <span class="read-little">Read Little</span>
+                </div>
+            </div>
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img width="500" src="./images/bgc-2.png" alt="">
+                </div>
+                <div class="blog-text">
+                    <span>5-2 Feb 2024 / Web design and application</span>
+                    <a href="#" class="blog-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci
+                        tenetur maiores
+                        delectus </a>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolor debitis, velit nisi et,
+                        necessitatibus ducimus sunt recusandae voluptate alias neque enim error ab, possimus odit animi
+                        maxime nam deleniti!
+                    </p>
+
+                    <b class="read-more">Read More</b><br>
+                    <span class="read-little">Read Little</span>
+                </div>
+            </div>
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img width="500" src="./images/bgc-2.png" alt="">
+                </div>
+                <div class="blog-text">
+                    <span>5-2 Feb 2024 / Web design and application</span>
+                    <a href="#" class="blog-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci
+                        tenetur maiores
+                        delectus </a>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolor debitis, velit nisi et,
+                        necessitatibus ducimus sunt recusandae voluptate alias neque enim error ab, possimus odit animi
+                        maxime nam deleniti!
+                    </p>
+
+                    <b class="read-more">Read More</b><br>
+                    <span class="read-little">Read Little</span>
+                </div>
+            </div>
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img width="500" src="./images/bgc-2.png" alt="">
+                </div>
+                <div class="blog-text">
+                    <span>5-2 Feb 2024 / Web design and application</span>
+                    <a href="#" class="blog-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci
+                        tenetur maiores
+                        delectus </a>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolor debitis, velit nisi et,
+                        necessitatibus ducimus sunt recusandae voluptate alias neque enim error ab, possimus odit animi
+                        maxime nam deleniti!
+                    </p>
+
+                    <b class="read-more">Read More</b><br>
+                    <span class="read-little">Read Little</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script>
 
@@ -90,8 +214,33 @@
             sidemenu.style.right = "0";
         }
         function closemenu() {
-            sidemenu.style.right = "-200px"
+            sidemenu.style.right = "-1500px"
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const readMoreButtons = document.querySelectorAll('.read-more');
+            const readLittleButtons = document.querySelectorAll('.read-little');
+
+            readMoreButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const blogText = this.closest('.blog-text');
+                    const paragraph = blogText.querySelector('p');
+                    paragraph.classList.add('expanded'); // Expand the paragraph
+                    this.style.display = 'none'; // Hide the 'Read More' button
+                    blogText.querySelector('.read-little').style.display = 'block'; // Show the 'Read Little' button
+                });
+            });
+
+            readLittleButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const blogText = this.closest('.blog-text');
+                    const paragraph = blogText.querySelector('p');
+                    paragraph.classList.remove('expanded'); // Collapse the paragraph
+                    this.style.display = 'none'; // Hide the 'Read Little' button
+                    blogText.querySelector('.read-more').style.display = 'block'; // Show the 'Read More' button
+                });
+            });
+        });
 
     </script>
 
