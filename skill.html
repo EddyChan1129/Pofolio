@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eddy Website</title>
+    <link rel="shortcut icon" href="./images/logo.png">
+
 
     <!-- Google Fonts style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,155 +19,18 @@
 </head>
 
 <body>
-    <nav id="test">
+    <nav>
         <img src="./images/logo.png" class="logo">
         <ul id="sidemenu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="quote.html">My Quotes</a></li>
+            <li><a href="portfolio.html">about</a></li>
             <li><a href="blog.html">Blog</a></li>
+            <li><a href="skill.html">skill</a></li>
             <li><a href="contact.html">Contact</a></li>
             <i class="fas fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
         </ul>
         <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
     </nav>
-    <div id="header">
-        <div class="container">
-            <div class="header-text">
-                <p>HI! I'M</p>
-                <h1>Eddy<br>CHAN</h1>
-                <p>WEB DESIGNER / UX DESIGNER</p>
-            </div>
-        </div>
-    </div>
-    <!------------------------------------about----------------------------------->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="./images/bgc.png">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam molestias quo debitis velit.
-                        Minus, error? Dolore et exercitationem, autem cumque ipsa aperiam quod, laboriosam voluptas
-                        aliquid, illo voluptatibus assumenda unde!</p>
-                    <br><br>
-                    <div class="tab">
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                            <p class="tab-links" onclick="opentab('education')">Education</p>
-                        </div>
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul>
-                                <li><span>Web Design</span><br>Designing Web Interfaces</li>
-                                <li><span>Web Design</span><br>Designing Web Interfaces</li>
-                                <li><span>Web Design</span><br>Designing Web Interfaces</li>
-
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="experience">
-                            <ul>
-                                <li>
-                                    <span>2023 - Current</span><br>Web Designer at Autoshop Solutions
-                                </li>
-                                <li>
-                                    <span>2023 - Current</span><br>Web Designer at Autoshop Solutions
-                                </li>
-                                <li>
-                                    <span>2023 - Current</span><br>Web Designer at Autoshop Solutions
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li>
-                                    <span>2023</span><br>Associate in UX Design
-                                </li>
-                                <li>
-                                    <span>2023</span><br>Associate in Web Design
-                                </li>
-
-                                <li>
-                                    <span>2017</span><br>Associate in Business Administration
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="#" download class="btn btn2">BUTTON</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-
-    <!----------------------------portfolio--------------------------------------------->
-
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">Portfolio</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="./images/bgc2.png" style="background-color: aliceblue;height: 100%;">
-                    <div class="layer">
-                        <h3>test1</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos molestiae ab omnis quam
-                            perferendis? Libero incidunt harum officiis explicabo cumque. Hic, voluptates? Sunt illo ad
-                            vero, nesciunt odio laudantium qui.</p>
-                        <a href="#"><i class="fa-sharp fa-solid fa-link"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="./images/bgc2.png" style="background-color: aliceblue;height: 50vh;">
-                    <div class="layer">
-                        <h3>test2</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos molestiae ab omnis quam
-                            perferendis? Libero incidunt harum officiis explicabo cumque. Hic, voluptates? Sunt illo ad
-                            vero, nesciunt odio laudantium qui.</p>
-                        <a href="#"><i class="fa-sharp fa-solid fa-link"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="./images/bgc2.png" style="background-color: aliceblue;height: 100%;">
-                    <div class="layer">
-                        <h3>test3</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos molestiae ab omnis quam
-                            perferendis? Libero incidunt harum officiis explicabo cumque. Hic, voluptates? Sunt illo ad
-                            vero, nesciunt odio laudantium qui.</p>
-                        <a href="#"><i class="fa-sharp fa-solid fa-link"></i></a>
-                    </div>
-                </div>
-
-            </div>
-            <a href="#" class="btn">SEE MORE</a>
-        </div>
-    </div>
-
-    <!----------------------------------Footer--------------------------------------------->
-    <div class="copyright">
-        <p>Nice to meet you!</p>
-    </div>
-    </div>
-
-    <script>
-
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-
-    </script>
 
     <script>
 
@@ -176,19 +41,6 @@
         }
         function closemenu() {
             sidemenu.style.right = "-200px"
-        }
-
-
-
-        window.onscroll = function () { myFunction() };
-
-        var navbar = document.getElementById("test");
-        var sticky = navbar.offsetTop;
-
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            }
         }
 
     </script>
