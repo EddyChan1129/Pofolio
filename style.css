@@ -9,7 +9,7 @@
 
 :root {
   --background-color: #1f242d;
-  --second-color: #2e8b57;
+  --second-color: #000804;
   --text-color: #ffffff;
   --main-color: #ff4500;
 }
@@ -24,19 +24,12 @@ body {
   color: var(--text-color);
 }
 
-#header {
-  width: 100%;
-  height: 100vh;
-  background-image: url(./images/user.png);
-  background-size: cover;
-  background-position: center;
-  align-items: center;
-}
-
 .container,
 nav {
   padding: 1rem 10%;
 }
+
+/***************************** nav ********************************/
 
 nav {
   position: sticky;
@@ -48,6 +41,7 @@ nav {
   justify-content: space-between;
   flex-wrap: wrap;
   background: var(--background-color);
+  z-index: 99;
 }
 
 .logo {
@@ -87,9 +81,56 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
+#header {
+  width: 100%;
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-img {
+  position: relative;
+  background-color: var(--second-color);
+  max-height: 558px;
+}
+
+.header-img:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -2;
+}
+.header-img:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -3;
+  filter: blur(50px);
+}
+
+.header-img:after,
+.header-img:before {
+  background: linear-gradient(235deg, var(--main-color), #000000);
+}
+
 .header-text {
-  margin-top: 20%;
+  margin-top: 10%;
   font-size: 3rem;
+  display: inline;
 }
 
 .header-text h1 {
@@ -105,7 +146,7 @@ nav ul li a:hover::after {
   color: var(--main-color);
 }
 
-/*------------------------about-------------------------------*/
+/***************************** About ********************************/
 
 #about {
   padding: 8rem 0;
@@ -158,7 +199,7 @@ nav ul li a:hover::after {
   content: "";
   width: 0;
   height: 0.3rem;
-  background: #6ee7b7;
+  background: var(--main-color);
   position: absolute;
   left: 0;
   bottom: -0.8rem;
@@ -166,7 +207,7 @@ nav ul li a:hover::after {
 }
 
 .tab-links.active-link::after {
-  width: 50%;
+  width: 70%;
 }
 
 .tab-contents ul li {
@@ -187,7 +228,7 @@ nav ul li a:hover::after {
   display: block;
 }
 
-/*------------------------Blog-------------------------------*/
+/***************************** Blog ********************************/
 
 .blog-box:hover {
   transform: translateY(-20px);
@@ -270,57 +311,114 @@ nav ul li a:hover::after {
   overflow: visible;
 }
 
-/* #services {
-  padding: 3rem 0;
+/***************************** Skill ********************************/
+
+.skill-header {
+  text-align: center;
+  color: var(--text-color);
+  padding: 1.6rem;
+  position: relative;
 }
 
-.services-list {
+.skill-header::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 0.4rem;
+  background: var(--main-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.skill-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 4rem;
-  margin-top: 5rem;
-}
-
-.services-list div {
-  background: var(--second-color);
-  padding: 4rem;
-  font-size: 1.3rem;
-  font-weight: 300;
-  border-radius: 1rem;
-  transition: background 0.5s, transform 0.5s;
-}
-
-.services-list img {
-  width: 100%;
-  height: auto;
-}
-
-.services-list div i {
-  font-size: 5rem;
-  margin-bottom: 3rem;
-}
-
-.services-list div h2 {
-  font-size: 3rem;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-}
-
-.services-list div a {
-  text-decoration: none;
-  color: #fff;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  grid-gap: 1.6rem;
+  padding: 1.6rem 0.8rem;
   font-size: 1.2rem;
-  margin-top: 2rem;
-  display: inline-block;
 }
 
-.services-list div:hover {
-  background: #b54769;
+.skill-box {
+  padding: 1rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.skill-title h3 {
+  color: var(--text-color);
+  margin: 2rem 0 0 0;
+}
+.skill-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.8rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+.skill-box:hover > .skill-title:after,
+.skill-box:hover > .skill-title:before {
+  width: 3.5rem;
+}
+
+.skill-box:hover .skill-img {
   transform: translateY(-10px);
-} */
+}
 
-/*------------------------portfolio-------------------------------*/
+.skill-title::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.3rem;
+  background-color: var(--main-color);
+  bottom: 0;
+  right: 49%;
+  border-radius: 0.2rem 0 0 0.2rem;
+  transition: 0.5s;
+}
+.skill-title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 49%;
+  width: 0;
+  height: 0.3rem;
+  border-radius: 0 0.2rem 0.2rem 0;
+  background-color: var(--main-color);
+  transition: 0.5s;
+}
 
+.skill-icon {
+  width: 5rem;
+}
+
+.skill-img {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  border-radius: 45px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.skill-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 90px;
+  background: rgba(100, 100, 100, 0.5);
+  border-radius: 45px 0 0 45px;
+}
+
+/***************************** Portfolio *****************************/
 #portfolio {
   padding: 50px 0;
 }
@@ -483,11 +581,45 @@ form .btn2 {
 }
 
 /*------------------------mobile-------------------------------*/
+.moblie-icon {
+  display: none;
+}
 
 nav .fas {
   display: none;
 }
+
 @media only screen and (max-width: 1250px) {
+  .logo {
+    width: 50px;
+  }
+
+  .header-img {
+    display: none;
+  }
+
+  nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 1rem 2rem;
+  }
+  #header {
+    height: 70vh;
+  }
+  .moblie-icon {
+    display: block;
+  }
+  .moblie-icon img {
+    width: 300px;
+  }
+  .header-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+  }
+
   nav {
     letter-spacing: 0.3rem;
   }
@@ -497,31 +629,16 @@ nav .fas {
     transition: 0.2s;
   }
 
-  .logo {
-    width: 50px;
-  }
-
-  nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 1rem 2rem;
-  }
-}
-
-@media only screen and (max-width: 850px) {
-  #header {
-    background-image: url(./images/test.png);
-    background-position: 0px;
-    background-repeat: no-repeat;
-  }
-
   .header-text {
-    margin-top: 100%;
     font-size: 1.6rem;
   }
 
   .header-text h1 {
     font-size: 3rem;
+  }
+
+  .header-text p {
+    margin-top: 10%;
   }
 
   ul#sidemenu li a {
@@ -584,5 +701,11 @@ nav .fas {
 
   .copyright {
     font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .moblie-icon img {
+    width: 300px;
   }
 }
