@@ -8,7 +8,7 @@
 
 :root {
   --background-color: #1f242d;
-  --second-color: #000804;
+  --second-color: #0008044e;
   --text-color: #ffffff;
   --main-color: #ff4500;
 }
@@ -148,27 +148,37 @@ nav ul li a:hover::after {
 /***************************** About ********************************/
 
 #about {
-  padding: 8rem 0;
   color: #ababab;
 }
 
 .row {
   display: flex;
-  justify-content: space-between;
+  padding: 5% 0;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .about-col-1 {
-  flex-basis: 35%;
+  flex-basis: 45%;
 }
 
 .about-col-1 img {
   width: 100%;
-  border-radius: 1.5rem;
+  border-radius: 20%;
+  padding: 10% 0;
+  background-color: var(--second-color);
 }
 
 .about-col-2 {
-  flex-basis: 60%;
+  flex-basis: 50%;
+}
+
+.about-text{
+  width: 40rem;
+  text-align: justify;
+  letter-spacing: 1.5px;
+  line-height: 2em;
+  padding:2% 0;
 }
 
 .sub-title {
@@ -267,7 +277,7 @@ nav ul li a:hover::after {
 }
 
 .blog-text span {
-  color: red;
+  color: var(--main-color);
   font-size: 0.9rem;
 }
 .blog-text .blog-title {
@@ -276,7 +286,7 @@ nav ul li a:hover::after {
   color: #272727;
 }
 .blog-text .blog-title:hover {
-  color: red;
+  color: var(--main-color);
   transition: all ease 0.5s;
 }
 
@@ -685,17 +695,43 @@ nav .fas {
     flex-basis: 100%;
   }
 
+  .about-col-1 img{
+    margin: 0;
+    width: 60%;
+  }
+
   .about-col-1 {
     margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .about-col-2 {
     font-size: 1.4rem;
+    text-align: center;
+  }
+  .tab-titles{
+    
+    width: 445px;
+    padding: 5% 0;
+    margin: 0 auto;
+  }
+
+  .tab-links::after {
+    left: 25px;
+  }
+
+  .about-text{
+    margin: 0 auto;
+    width: 70%;
   }
 
   .tab-links {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
     margin-right: 2rem;
+    padding: 0 25px;
+   
   }
 
   .contact-left,
@@ -714,7 +750,7 @@ nav .fas {
   }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 600px) {
   .moblie-icon img {
     width: 300px;
   }
