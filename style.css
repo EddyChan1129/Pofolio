@@ -323,7 +323,7 @@ nav ul li a:hover::after {
 .skill-header::after {
   content: "";
   position: absolute;
-  width: 100px;
+  width: 26rem;
   height: 0.4rem;
   background: var(--main-color);
   bottom: 0;
@@ -333,6 +333,7 @@ nav ul li a:hover::after {
 }
 
 .skill-container {
+  margin: 0 10%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
