@@ -3,7 +3,6 @@
   padding: 0px;
   font-family: "Mulish", sans-serif;
   text-decoration: none;
-
   box-sizing: border-box;
 }
 
@@ -318,6 +317,7 @@ nav ul li a:hover::after {
   color: var(--text-color);
   padding: 1.6rem;
   position: relative;
+  font-size: large;
 }
 
 .skill-header::after {
@@ -329,6 +329,7 @@ nav ul li a:hover::after {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  border-radius: 2px;
 }
 
 .skill-container {
@@ -345,6 +346,18 @@ nav ul li a:hover::after {
   padding: 1rem;
   color: var(--text-color);
   cursor: pointer;
+}
+
+.skill-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+  text-align: justify;
+}
+.skill-box p {
+  width: 300px;
 }
 
 .skill-title h3 {
@@ -372,32 +385,33 @@ nav ul li a:hover::after {
   content: "";
   position: absolute;
   width: 0;
-  height: 0.3rem;
+  height: 3px;
   background-color: var(--main-color);
   bottom: 0;
-  right: 49%;
-  border-radius: 0.2rem 0 0 0.2rem;
+  right: 50%;
+  border-radius: 20px 0 0 20px;
   transition: 0.5s;
 }
 .skill-title::before {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 49%;
+  left: 50%;
   width: 0;
-  height: 0.3rem;
-  border-radius: 0 0.2rem 0.2rem 0;
+  height: 3px;
+  border-radius: 0 22px 22px 0;
   background-color: var(--main-color);
   transition: 0.5s;
 }
 
 .skill-icon {
-  width: 5rem;
+  width: 100px;
+  border-radius: 50px;
 }
 
 .skill-img {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   position: relative;
   border-radius: 45px;
   background-color: #fff;
@@ -405,17 +419,6 @@ nav ul li a:hover::after {
   justify-content: center;
   align-items: center;
   transition: 0.5s;
-}
-
-.skill-img::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 90px;
-  background: rgba(100, 100, 100, 0.5);
-  border-radius: 45px 0 0 45px;
 }
 
 /***************************** Portfolio *****************************/
@@ -704,8 +707,17 @@ nav .fas {
   }
 }
 
+@media only screen and (max-width: 980px) {
+  .skill-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media only screen and (max-width: 550px) {
   .moblie-icon img {
     width: 300px;
+  }
+  .skill-container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
