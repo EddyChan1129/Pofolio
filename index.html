@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eddy Website</title>
 
-    <link rel="shortcut icon" href="./images/logo2.png">
-
     <!-- Google Fonts style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,80 +21,49 @@
         <img src="./images/logo.png" class="logo">
         <ul id="sidemenu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="skill.html">Skill</a></li>
+            <li><a href="portfolio.html">about</a></li>
             <li><a href="blog.html">Blog</a></li>
+            <li><a href="skill.html">skill</a></li>
             <li><a href="contact.html">Contact</a></li>
             <i class="fas fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
         </ul>
         <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
     </nav>
-    <div id="header">
+
+    <!------------------------------------contact----------------------------------->
+
+    <div id="contact">
         <div class="container">
-            <div class="header-content">
-                <div class="header-text">
-                    <div class="moblie-icon">
-                        <img src="./images/me.png" alt="logo-myself">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>22026266d@connect.polyu.hk</p>
+                    <p><i class="fa-solid fa-phone"></i> (852) 9716 6524</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></i></a>
+                        <a href=""><i class="fa-brands fa-square-instagram"></i></i></a>
                     </div>
-                    <p>HI! I'M</p>
-                    <h1>Eddy<br>CHAN</h1>
-                    <p>WEB DESIGNER / UX DESIGNER</p>
-
-
+                    <a href="images/PortfolioResume.pdf" download class="btn btn2">Button</a>
                 </div>
-                <div class="header-img">
-                    <img src="./images/me.png" alt="logo-myself">
+                <div class="contact-right">
+
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">SEND MESSAGeE</button>
+                    </form>
+
                 </div>
             </div>
         </div>
-    </div>
-
-    <!----------------------------Quotes--------------------------------------------->
-
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">Quotes</h1>
-            <div class="work-list">
-                <div class="work">
-
-                    <img src="./images/bgc2.png">
-                    <div class="layer">
-                        <h3>test1</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos molestiae ab omnis quam
-                            perferendis? Libero incidunt harum officiis explicabo cumque. Hic, voluptates? Sunt illo
-                            ad
-                            vero, nesciunt odio laudantium qui.</p>
-                        <a href="#"><i class="fa-sharp fa-solid fa-link"></i></a>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="btn">SEE MORE</a>
+        <div class="copyright">
+            <p>Footer</p>
         </div>
     </div>
 
-    <!----------------------------------Footer--------------------------------------------->
-    <div class="copyright">
-        <p>Nice to meet you!</p>
-    </div>
-    </div>
 
-    <script>
-
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-
-    </script>
 
     <script>
 
@@ -109,21 +76,20 @@
             sidemenu.style.right = "-200px"
         }
 
-
-
-        window.onscroll = function () { myFunction() };
-
-        var navbar = document.getElementById("test");
-        var sticky = navbar.offsetTop;
-
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            }
-        }
-
     </script>
 
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby9r2hHHSwgin5iMaKXL12oZ7qn4Nfr2luh-K_iqJb6dAXw0_cQA5-H_MytX4B2Mg/exec';
+        const form = document.forms['submit-to-google-sheet'];
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 
 </body>
 
