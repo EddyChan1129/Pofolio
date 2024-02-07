@@ -33,63 +33,20 @@
     <div id="header">
         <div class="container">
             <div class="header-content">
-                <div class="header-text">
-                    <p>HI! I'M</p>
-                    <h1>Eddy<br>CHAN</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eum aspernatur. Ad ipsam, magni
-                        rem accusantium laborum, illo nostrum eligendi debitis eaque, molestias quis obcaecati
-                        praesentium? Incidunt suscipit enim a.</p>
-                </div>
                 <div class="header-img">
                     <img src="./images/me.png" alt="logo-myself">
                 </div>
+                <div class="header-text">
+                    <p>HI! I'M</p>
+                    <h1>Eddy<br>CHAN</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque ab, consequuntur qui vero numquam
+                        maxime quia aperiam exercitationem placeat tempore. Molestias obcaecati delectus iusto voluptas
+                        quidem eveniet animi dolores magnam.</p>
+                </div>
+
             </div>
         </div>
     </div>
-
-    <script>
-
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-
-    </script>
-
-    <script>
-
-        var sidemenu = document.getElementById("sidemenu");
-
-        function openmenu() {
-            sidemenu.style.right = "0";
-        }
-        function closemenu() {
-            sidemenu.style.right = "-200px"
-        }
-
-
-
-        window.onscroll = function () { myFunction() };
-
-        var navbar = document.getElementById("test");
-        var sticky = navbar.offsetTop;
-
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            }
-        }
-
-    </script>
 
 
 </body>
