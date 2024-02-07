@@ -39,7 +39,8 @@ nav {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  background: var(--second-color);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    var(--second-color);
   z-index: 99;
 }
 
@@ -124,26 +125,28 @@ nav ul li a:hover::after {
 
 .row {
   display: flex;
-  padding: 5% 0;
+  padding: 10% 0;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .about-col-1 {
   margin-left: 5%;
-  flex-basis: 35%;
 }
 
 .about-col-1 img {
   width: 100%;
   border-radius: 20%;
   padding: 10% 10% 0;
-  background-color: var(--second-color);
+  background: linear-gradient(
+    to bottom,
+    var(--second-color),
+    var(--main-color)
+  );
 }
 
 .about-col-2 {
   margin-left: 5%;
-  flex-basis: 35%;
 }
 
 .about-text {
@@ -166,11 +169,13 @@ nav ul li a:hover::after {
 
 .tab-titles {
   display: flex;
-  margin: 2rem 0 4rem;
+  margin: 1rem 0 2rem;
+  justify-content: center;
+  border-radius: 25px;
 }
 
 .tab-links {
-  margin-right: 5rem;
+  margin-right: 3rem;
   font-size: 1.8rem;
   font-weight: 500;
   cursor: pointer;
@@ -189,17 +194,17 @@ nav ul li a:hover::after {
 }
 
 .tab-links.active-link::after {
-  width: 70%;
+  width: 50%;
 }
 
 .tab-contents ul li {
   list-style: none;
-  margin: 1rem 0;
+  margin: 0 0 1.5rem 0;
 }
 
 .tab-contents ul li span {
   color: var(--main-color);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 .tab-contents {
@@ -407,11 +412,11 @@ nav ul li a:hover::after {
 
 .btn {
   display: block;
-  margin: 5rem auto;
+  margin: 2rem auto;
   width: fit-content;
   border: 1px solid var(--main-color);
   padding: 1.4rem 5rem;
-  border-radius: 1rem;
+  border-radius: 2.5rem;
   text-decoration: none;
   color: #fff;
   transition: background 0.5s;
@@ -616,6 +621,10 @@ nav .fas {
     width: 60%;
   }
 
+  #about .sub-title {
+    font-size: 3rem;
+  }
+
   .about-col-1 {
     margin-bottom: 3rem;
     display: flex;
@@ -623,12 +632,15 @@ nav .fas {
     align-items: center;
   }
 
+  .about-text {
+    font-size: 1rem;
+  }
   .about-col-2 {
     font-size: 1.4rem;
     text-align: center;
   }
   .tab-titles {
-    width: 445px;
+    width: 420px;
     padding: 5% 0;
     margin: 0 auto;
   }
@@ -643,7 +655,7 @@ nav .fas {
   }
 
   .tab-links {
-    font-size: 2.2rem;
+    font-size: 1.7rem;
     margin-right: 2rem;
     padding: 0 25px;
   }
