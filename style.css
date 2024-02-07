@@ -8,7 +8,7 @@
 
 :root {
   --background-color: #1f242d;
-  --second-color: #382c1bd3;
+  --second-color: #382c1ba4;
   --text-color: #ffffff;
   --main-color: #ff4500;
 }
@@ -125,12 +125,12 @@ nav ul li a:hover::after {
 
 .row {
   display: flex;
-  padding: 10% 0;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .about-col-1 {
+  margin-top: 5%;
   margin-left: 5%;
 }
 
@@ -146,6 +146,8 @@ nav ul li a:hover::after {
 }
 
 .about-col-2 {
+  margin-top: 5%;
+
   margin-left: 5%;
 }
 
@@ -155,6 +157,7 @@ nav ul li a:hover::after {
   letter-spacing: 1.5px;
   line-height: 2em;
   padding: 2% 0;
+  color: var(--text-color);
 }
 
 .sub-title {
@@ -168,6 +171,7 @@ nav ul li a:hover::after {
 }
 
 .tab-titles {
+  color: var(--text-color);
   display: flex;
   margin: 1rem 0 2rem;
   justify-content: center;
@@ -196,15 +200,29 @@ nav ul li a:hover::after {
 .tab-links.active-link::after {
   width: 50%;
 }
+.tab-contents ul {
+  margin: 0 auto;
+}
 
 .tab-contents ul li {
   list-style: none;
-  margin: 0 0 1.5rem 0;
+  font-size: 1.4rem;
 }
 
 .tab-contents ul li span {
+  font-style: italic;
   color: var(--main-color);
   font-size: 1.5rem;
+}
+
+.tab-contents ul li p {
+  width: 25vw;
+  padding: 5% 10%;
+  color: var(--text-color);
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+  text-align: justify;
 }
 
 .tab-contents {
@@ -212,7 +230,7 @@ nav ul li a:hover::after {
 }
 
 .tab-contents.active-tab {
-  display: block;
+  display: flex;
 }
 
 /***************************** Blog ********************************/
@@ -484,6 +502,8 @@ nav ul li a:hover::after {
 .btn.btn2 {
   display: inline-block;
   background: var(--main-color);
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
 .contact-right form {
@@ -632,8 +652,8 @@ nav .fas {
     align-items: center;
   }
 
-  .about-text {
-    font-size: 1rem;
+  .about-col-2 .about-text p {
+    color: var(--text-color);
   }
   .about-col-2 {
     font-size: 1.4rem;
