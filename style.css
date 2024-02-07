@@ -8,7 +8,7 @@
 
 :root {
   --background-color: #1f242d;
-  --second-color: #0008044e;
+  --second-color: #382c1bd3;
   --text-color: #ffffff;
   --main-color: #ff4500;
 }
@@ -25,7 +25,7 @@ body {
 
 .container,
 nav {
-  padding: 1rem 10%;
+  padding: 1rem 15%;
 }
 
 /***************************** nav ********************************/
@@ -39,7 +39,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  background: var(--background-color);
+  background: var(--second-color);
   z-index: 99;
 }
 
@@ -93,43 +93,10 @@ nav ul li a:hover::after {
   justify-content: space-between;
 }
 
-.header-img {
-  position: relative;
-  background-color: var(--second-color);
-  max-height: 558px;
-}
-
-.header-img:before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: #fff;
-  z-index: -2;
-}
-.header-img:after {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: #fff;
-  z-index: -3;
-  filter: blur(50px);
-}
-
-.header-img:after,
-.header-img:before {
-  background: linear-gradient(235deg, var(--main-color), #000000);
-}
-
 .header-text {
+  width: 50%;
   margin-top: 10%;
   font-size: 3rem;
-  display: inline;
 }
 
 .header-text h1 {
@@ -145,6 +112,10 @@ nav ul li a:hover::after {
   color: var(--main-color);
 }
 
+.header-img {
+  width: 40%;
+}
+
 /***************************** About ********************************/
 
 #about {
@@ -155,22 +126,24 @@ nav ul li a:hover::after {
   display: flex;
   padding: 5% 0;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .about-col-1 {
-  flex-basis: 45%;
+  margin-left: 5%;
+  flex-basis: 35%;
 }
 
 .about-col-1 img {
   width: 100%;
   border-radius: 20%;
-  padding: 10% 0;
+  padding: 10% 10% 0;
   background-color: var(--second-color);
 }
 
 .about-col-2 {
-  flex-basis: 50%;
+  margin-left: 5%;
+  flex-basis: 35%;
 }
 
 .about-text {
@@ -432,83 +405,13 @@ nav ul li a:hover::after {
   transition: 0.5s;
 }
 
-/***************************** Portfolio *****************************/
-#portfolio {
-  padding: 50px 0;
-}
-
-.work-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(2.5rem, 1fr));
-  grid-gap: 4rem;
-  margin-top: 5rem;
-}
-
-.work {
-  border-radius: 1rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.work img {
-  width: 100%;
-  border-radius: 1rem;
-  display: block;
-  transition: transform 0.5s;
-}
-
-.layer {
-  width: 100%;
-  height: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), var(--main-color));
-  border-radius: 1rem;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 4rem;
-  text-align: center;
-  flex-direction: column;
-  font-size: 1.4rem;
-  transition: height 0.5s;
-}
-
-.layer h3 {
-  font-weight: 500;
-  margin-bottom: 2rem;
-}
-
-.layer a {
-  margin-top: 2rem;
-  color: #ffe84f;
-  text-decoration: none;
-  font-size: 1.8rem;
-  line-height: 60px;
-  background: #fff;
-  width: 6rem;
-  height: 6rem;
-  border-radius: 50%;
-  text-align: center;
-}
-
-.work:hover img {
-  transform: scale(1.1);
-}
-
-.work:hover .layer {
-  height: 100%;
-}
-
 .btn {
   display: block;
   margin: 5rem auto;
   width: fit-content;
   border: 1px solid var(--main-color);
   padding: 1.4rem 5rem;
-  border-radius: 0.6rem;
+  border-radius: 1rem;
   text-decoration: none;
   color: #fff;
   transition: background 0.5s;
@@ -563,7 +466,7 @@ nav ul li a:hover::after {
   text-decoration: none;
   font-size: 3rem;
   margin-right: 1.5rem;
-  color: #ababab;
+  color: var(--text-color);
   display: inline-block;
   transition: transform 0.5s;
 }
@@ -625,10 +528,6 @@ nav .fas {
     width: 50px;
   }
 
-  .header-img {
-    display: none;
-  }
-
   nav ul li {
     display: inline-block;
     list-style: none;
@@ -644,7 +543,7 @@ nav .fas {
     width: 300px;
   }
   .header-content {
-    display: flex;
+    display: block;
     width: 100%;
     align-items: center;
     justify-content: center;
