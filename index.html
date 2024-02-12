@@ -16,9 +16,14 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/e0098116ea.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
 </head>
 
+
+
 <body>
+
     <nav>
         <img src="./images/logo.png" class="logo">
         <ul id="sidemenu">
@@ -37,16 +42,50 @@
                     <img src="./images/me.png" alt="logo-myself">
                 </div>
                 <div class="header-text">
-                    <p>HI! I'M</p>
-                    <h1>Eddy<br>CHAN</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque ab, consequuntur qui vero numquam
-                        maxime quia aperiam exercitationem placeat tempore. Molestias obcaecati delectus iusto voluptas
-                        quidem eveniet animi dolores magnam.</p>
+                    <div class="header-text-container">
+                        <div>
+                            <p>Hello! I'M</p>
+                            <h1>Eddy CHAN</h1>
+                            <p>And I'm</p>
+                            <span class="multiple-text">Animal lover</span>
+                        </div>
+
+                        <div id="all-btn">
+                            <a class="button">
+                                <svg height="30" width="130">
+                                    <rect class="shape" height="30" width="130" />
+                                    <div class="text">View More</div>
+                                </svg>
+                            </a>
+                                    
+                        </div>
+                    </div>
                 </div>
+
 
             </div>
         </div>
     </div>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-1500px"
+        }
+
+        const typed = new Typed('.multiple-text', {
+            strings: ['Animal lover', 'STEM Teaching Assistant at Jockey Club', 'PolyU Computing Student'],
+            typeSpeed: 30,
+            backSpeed: 30,
+            backDelay: 300,
+            startDelay: 300,
+            cursorChar: '',
+            loop: true
+        });
+    </script>
 
 
 </body>
