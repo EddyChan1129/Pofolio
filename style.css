@@ -150,6 +150,7 @@ nav ul li a:hover::after {
   width: 50%;
   margin: 7% 0 50px 20px;
 }
+
 .header-text h1 {
   font-size: 6rem;
   margin: 2rem 0;
@@ -193,7 +194,7 @@ nav ul li a:hover::after {
 }
 /***************************** About ********************************/
 
-#about .row {
+.row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -302,7 +303,6 @@ nav ul li a:hover::after {
 }
 
 .blog-box {
-  border-radius: 10px;
   width: 420px;
   background-color: #fff;
   margin: 3rem;
@@ -316,7 +316,6 @@ nav ul li a:hover::after {
 }
 
 .blog-img img {
-  border-radius: 10px 10px 0 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -517,7 +516,7 @@ span.read-little {
 }
 
 #contact .container .row {
-  justify-content: center;
+  justify-content: space-evenly;
 }
 #contact .container .row h1 {
   font-size: 4rem;
@@ -532,6 +531,9 @@ span.read-little {
 
 .contact-right {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
 }
 
 .contact-left p {
@@ -542,24 +544,6 @@ span.read-little {
   color: var(--main-color);
   margin-right: 1.25rem;
   font-size: 2.5rem;
-}
-
-.social-icons {
-  margin-top: 3rem;
-}
-
-.social-icons a {
-  text-decoration: none;
-  font-size: 3rem;
-  margin-right: 1.5rem;
-  color: var(--text-color);
-  display: inline-block;
-  transition: transform 0.5s;
-}
-
-.social-icons a:hover {
-  color: var(--main-color);
-  transform: translateY(-5px);
 }
 
 .btn.btn2 {
@@ -573,12 +557,20 @@ span.read-little {
   width: 100%;
 }
 
+input::placeholder,
+textarea::placeholder {
+  color: grey;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  font-size: smaller;
+}
+
 form input,
 form textarea {
   width: 100%;
   border: 0;
   outline: none;
-  background: #262626;
+  background: #221a12;
   padding: 1.5rem;
   margin: 1.5rem 0;
   color: #fff;
@@ -593,13 +585,115 @@ form .btn2 {
   cursor: pointer;
 }
 
-.copyright {
-  width: 100%;
+.contact-left p {
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+}
+
+#cal {
+  margin-top: 3rem;
+  color: white;
+  background-color: transparent;
+}
+
+#cal h3 {
   text-align: center;
-  padding: 2.5rem 0;
-  background: #262626;
-  font-weight: 300;
-  margin-top: 2rem;
+  padding: 2px 0;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+#cal h3::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  height: 1px;
+  width: 63%;
+  bottom: -3px;
+  left: 20%;
+}
+
+#cal .container {
+  border-radius: 10px;
+  padding: 0;
+  position: relative;
+  height: 225px;
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: rgb(56, 56, 56);
+  box-shadow: 5px 8px 50px 10px rgba(0, 0, 0, 0.5);
+}
+
+#cal .container h3 {
+  font-weight: 700;
+}
+
+#cal .container .day {
+  font-weight: 700;
+}
+
+#cal .container .days {
+  font-size: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5px;
+}
+#cal .container .date {
+  padding-top: 5%;
+  height: 100%;
+}
+
+#cal .container .day,
+#cal .container .number,
+#cal .container .number-pre {
+  height: 25.5px;
+  width: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#cal .container .number.active {
+  background-color: rgb(255, 111, 97);
+  border: 1px solid rgba(238, 238, 238, 0.4);
+}
+
+#cal .container .number-pre {
+  color: rgba(238, 238, 238, 0.4);
+}
+
+#cal .container .number-bgc {
+  text-transform: uppercase;
+  width: 50px;
+  text-align: center;
+  border-radius: 15px;
+  padding: 3px;
+  margin: 0px auto;
+  margin-top: 15px;
+}
+#cal .number-bgc.intern,
+#cal .number.intern,
+#cal .number-pre.intern {
+  background: rgb(0, 121, 191);
+}
+#cal .number-bgc.pt,
+#cal .number.pt,
+#cal .number-pre.pt {
+  background: rgb(95, 180, 112);
+}
+#cal .number-bgc.study,
+#cal .number.study,
+#cal .number-pre.study {
+  background: rgb(255, 111, 97);
+}
+
+#cal .container .number:hover,
+#cal .container .number-pre:hover {
+  border: 2px solid rgba(238, 238, 238, 0.4);
 }
 
 /*------------------------mobile-------------------------------*/
@@ -666,6 +760,7 @@ nav .fas {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    text-align: center;
   }
 
   .header-text-container {
@@ -703,13 +798,19 @@ nav .fas {
   }
 
   .multiple-text {
+    margin: 0 auto;
     font-size: 1.85rem;
     width: 200px;
+  }
+  .button {
+    width: 100%;
+    margin: 0 auto;
   }
 
   .sub-title {
     font-size: 4rem;
   }
+
   /*************** About ***************/
 
   .about-col-1 {
@@ -795,8 +896,9 @@ nav .fas {
     padding: 0;
   }
 
-  .copyright {
-    font-size: 1.4rem;
+  .contact-right,
+  .contact-left {
+    width: 100%;
   }
 }
 
