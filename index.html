@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eddy Website</title>
+    <title>
+        Eddy Website
+    </title>
 
     <link rel="shortcut icon" href="./images/logo2.png">
 
     <!-- Google Fonts style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/e0098116ea.js" crossorigin="anonymous"></script>
@@ -27,6 +29,7 @@
     <nav>
         <img src="./images/logo.png" class="logo">
         <ul id="sidemenu">
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="skill.html">Skill</a></li>
             <li><a href="blog.html">Blog</a></li>
@@ -44,7 +47,7 @@
                 <div class="header-text">
                     <div class="header-text-container">
                         <div>
-                            <p>Hello! I'M</p>
+                            <p>Hello! I'M </p>
                             <h1>Eddy CHAN</h1>
                             <p>And I'm</p>
                             <span class="multiple-text">Animal lover</span>
@@ -52,12 +55,11 @@
 
                         <div id="all-btn">
                             <a class="button">
-                                <svg height="30" width="130">
-                                    <rect class="shape" height="30" width="130" />
+                                <svg height="50" width="200">
+                                    <rect class="shape" height="50" width="200" />
                                     <div class="text">View More</div>
                                 </svg>
-                            </a>
-                                    
+                            </a>         
                         </div>
                     </div>
                 </div>
@@ -67,6 +69,11 @@
         </div>
     </div>
     <script>
+        document.querySelector('#all-btn .button').addEventListener('click', function () {
+            window.location.href = './about.html';
+        });
+
+
         var sidemenu = document.getElementById("sidemenu");
 
         function openmenu() {

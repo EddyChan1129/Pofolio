@@ -1,7 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: "Mulish", sans-serif;
+  font-family: "Roboto", sans-serif;
   text-decoration: none;
   box-sizing: border-box;
 }
@@ -43,10 +43,11 @@ nav {
 .shape {
   fill: transparent;
   stroke: var(--main-color);
-  stroke-dasharray: 50 300;
+  stroke-dasharray: 64 400;
   stroke-dashoffset: 145;
   stroke-width: 5px;
   transition: stroke-width 0.3s, stroke-dashoffset 0.3s, stroke-dasharray 0.9s;
+  cursor: pointer;
 }
 
 .shape:hover {
@@ -56,11 +57,14 @@ nav {
 }
 
 .text {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  text-shadow: 0 0 3px var(--text-color);
+  font-family: "Roboto", sans-serif;
   line-height: 1rem;
+  text-align: center;
   letter-spacing: 0.3rem;
   color: var(--text-color);
-  top: -1.75rem;
+  top: -3rem;
   position: relative;
   pointer-events: none;
 }
@@ -89,6 +93,7 @@ nav ul li {
   display: inline-block;
   list-style: none;
   margin: 1rem 2rem;
+  text-shadow: 0 0 2px var(--text-color);
 }
 
 nav ul li a {
@@ -97,6 +102,7 @@ nav ul li a {
   font-size: 2.2rem;
   position: relative;
   transition: 0.2s;
+  text-shadow: 0 0 10px var(--text-color);
 }
 
 nav ul li a::after {
@@ -126,6 +132,7 @@ nav ul li a:hover::after {
   background-size: cover;
   background-position: center;
   align-items: center;
+  letter-spacing: 0.5rem;
 }
 
 .header-content {
@@ -147,6 +154,7 @@ nav ul li a:hover::after {
   font-size: 6rem;
   margin: 2rem 0;
   color: var(--text-color);
+  text-shadow: 0 0 5px var(--text-color);
 }
 
 .header-text p {
@@ -170,6 +178,7 @@ nav ul li a:hover::after {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  box-shadow: 0 0 20px var(--main-color);
 }
 
 .multiple-text {
@@ -179,54 +188,38 @@ nav ul li a:hover::after {
   font-size: xx-large;
   color: var(--main-color);
   font-weight: 700;
+  letter-spacing: 0.5rem;
+  text-shadow: 0 0 5px var(--main-color);
 }
 /***************************** About ********************************/
 
-#about {
-  color: #ababab;
-}
-
-.row {
+#about .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.about-col-1 {
-  margin-top: 5%;
-  margin-left: 5%;
+#about h1 {
+  margin-top: 3%;
 }
 
 .about-col-1 img {
-  width: 100%;
-  border-radius: 20%;
-  padding: 10% 10% 0;
-  background: linear-gradient(
-    to bottom,
-    var(--second-color),
-    var(--main-color)
-  );
+  width: 400px;
+  padding: 5% 5% 0;
+  box-shadow: 0 0 20px var(--main-color);
 }
 
 .about-col-2 {
-  margin-top: 5%;
-
-  margin-left: 5%;
-}
-
-.about-text {
-  width: 40rem;
-  text-align: justify;
-  letter-spacing: 1.5px;
-  line-height: 2em;
-  padding: 2% 0;
-  color: var(--text-color);
+  width: 40%;
+  padding: 5%;
 }
 
 .sub-title {
-  font-size: 60px;
-  font-weight: 600;
-  color: #fff;
+  font-size: 6rem;
+  margin: 2rem 0;
+  color: var(--text-color);
+  text-shadow: 0 0 5px var(--text-color);
+  letter-spacing: 0.5rem;
 }
 
 .sub-title p {
@@ -279,13 +272,12 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ul li p {
-  width: 25vw;
-  padding: 5% 10%;
   color: var(--text-color);
   font-size: 1rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.15rem;
   line-height: 2rem;
   text-align: justify;
+  margin: 3% 0;
 }
 
 .tab-contents {
@@ -310,12 +302,12 @@ nav ul li a:hover::after {
 }
 
 .blog-box {
-  border-radius: 30px;
+  border-radius: 10px;
   width: 420px;
   background-color: #fff;
-  border: 1px solid #ececec;
   margin: 3rem;
   transition: 0.9s;
+  box-shadow: 0 0 10px var(--main-color);
 }
 
 .blog-img {
@@ -324,7 +316,7 @@ nav ul li a:hover::after {
 }
 
 .blog-img img {
-  border-radius: 30px 30px 0 0;
+  border-radius: 10px 10px 0 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -366,6 +358,7 @@ nav ul li a:hover::after {
   color: #0f0f0f;
   font-size: 1rem;
   transition: all ease 0.5s;
+  cursor: pointer;
 }
 .blog-text .read-more:hover {
   color: var(--main-color);
@@ -376,6 +369,7 @@ span.read-little {
   display: none;
   font-weight: bold;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .blog-text p.expanded {
@@ -493,6 +487,7 @@ span.read-little {
   justify-content: center;
   align-items: center;
   transition: 0.5s;
+  box-shadow: 0 0 20px var(--main-color);
 }
 
 .btn {
@@ -668,12 +663,13 @@ nav .fas {
   }
 
   #header .container {
-    padding: 0;
-    display: flex;
-    height: 90vh;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+  }
+
+  .header-text-container {
+    height: 400px;
   }
   .header-text h1 {
     font-size: 3rem;
@@ -698,6 +694,7 @@ nav .fas {
     width: 40%;
   }
   .header-text {
+    height: 50vh;
     font-size: 1.6rem;
     padding: 0;
 
@@ -706,21 +703,27 @@ nav .fas {
   }
 
   .multiple-text {
+    font-size: 1.85rem;
     width: 200px;
   }
 
   .sub-title {
     font-size: 4rem;
   }
+  /*************** About ***************/
 
-  .about-col-1,
-  .about-col-2 {
-    flex-basis: 100%;
+  .about-col-1 {
+    display: flex;
+    flex-wrap: wrap;
   }
 
+  #about h1 {
+    margin: 0;
+    margin-top: 3%;
+  }
   .about-col-1 img {
     margin: 0;
-    width: 60%;
+    width: 70%;
   }
 
   #about .sub-title {
@@ -734,26 +737,10 @@ nav .fas {
     align-items: center;
   }
 
-  .about-col-2 .about-text p {
-    color: var(--text-color);
-  }
-  .about-col-2 {
-    font-size: 1.4rem;
-    text-align: center;
-  }
   .tab-titles {
     width: 420px;
     padding: 5% 0;
     margin: 0 auto;
-  }
-
-  .tab-links::after {
-    left: 25px;
-  }
-
-  .about-text {
-    margin: 0 auto;
-    width: 70%;
   }
 
   .tab-links {
@@ -762,9 +749,50 @@ nav .fas {
     padding: 0 25px;
   }
 
-  .contact-left,
-  .contact-right {
-    flex-basis: 100%;
+  .tab-links::after {
+    left: 25px;
+  }
+
+  .about-col-2 {
+    width: 70%;
+    padding: 0;
+  }
+
+  .about-col-2 .about-text p {
+    color: var(--text-color);
+  }
+  .about-col-2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .about-col-2 .tab {
+    width: 100%;
+    padding: 0;
+  }
+
+  .tab-contents.active-tab {
+    padding: 0;
+    width: 100%;
+  }
+  .tab-contents {
+    padding: 0;
+    width: 100%;
+  }
+
+  .tab-contents ul {
+    padding: 0;
+  }
+  .tab-contents ul li p {
+    padding: 0;
+  }
+
+  .tab-contents ul li {
+    padding: 0;
+  }
+
+  #about .container .row {
+    padding: 0;
   }
 
   .copyright {
