@@ -20,8 +20,28 @@ html {
 }
 
 body {
-  background: var(--background-color);
   color: var(--text-color);
+  background-image: url("../images/polyu.jpeg") 0.5 0.5;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body::before {
+  content: "";
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../images/polyu.jpeg");
+  background-position: center center;
+  background-size: cover;
+  z-index: -1;
 }
 
 .container,
@@ -41,7 +61,7 @@ nav {
 }
 
 .shape {
-  fill: transparent;
+  fill: var(--second-color);
   stroke: var(--main-color);
   stroke-dasharray: 64 400;
   stroke-dashoffset: 145;
@@ -99,7 +119,7 @@ nav ul li {
 nav ul li a {
   color: var(--text-color);
   text-decoration: none;
-  font-size: 2.2rem;
+  font-size: 1.75rem;
   position: relative;
   transition: 0.2s;
   text-shadow: 0 0 10px var(--text-color);
@@ -307,7 +327,7 @@ nav ul li a:hover::after {
   background-color: #fff;
   margin: 3rem;
   transition: 0.9s;
-  box-shadow: 0 0 10px var(--main-color);
+  box-shadow: var(--main-color) 0px 10px 10px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .blog-img {
@@ -425,6 +445,8 @@ span.read-little {
 }
 .skill-box p {
   width: 300px;
+  padding: 20px;
+  box-shadow: 0 0 20px var(--main-color);
 }
 
 .skill-title h3 {
@@ -508,7 +530,7 @@ span.read-little {
 /*------------------------contact-------------------------------*/
 
 #contact {
-  margin-top: 5%;
+  margin-top: 1.2rem;
   height: 75vh;
 }
 #contact .container {
@@ -519,8 +541,9 @@ span.read-little {
   justify-content: space-evenly;
 }
 #contact .container .row h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-top: 1.2rem;
+  margin-bottom: -1rem;
 }
 
 .contact-left {
@@ -557,6 +580,23 @@ span.read-little {
   width: 100%;
 }
 
+.contact-right #sub-btn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  width: 100%;
+}
+
+#sent-msg {
+  display: none;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
+  color: var(--text-color);
+  text-shadow: 0 0 3px var(--text-color);
+}
+
 input::placeholder,
 textarea::placeholder {
   color: grey;
@@ -586,11 +626,28 @@ form .btn2 {
 }
 
 .contact-left p {
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.15rem;
   font-weight: 600;
 }
 
+#contact #loading {
+  display: none;
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
+  color: var(--text-color);
+  text-shadow: 0 0 3px var(--text-color);
+  text-align: center;
+}
+
+.load {
+  transform: translateX(-50%);
+}
+
 #cal {
+  position: relative;
+  top: 10%;
+  left: 20%;
+  transform: scale(1.4);
   margin-top: 3rem;
   color: white;
   background-color: transparent;
@@ -609,9 +666,9 @@ form .btn2 {
   position: absolute;
   background: #fff;
   height: 1px;
-  width: 63%;
-  bottom: -3px;
-  left: 20%;
+  width: 55%;
+  bottom: -1.5px;
+  left: 22%;
 }
 
 #cal .container {
@@ -679,16 +736,19 @@ form .btn2 {
 #cal .number.intern,
 #cal .number-pre.intern {
   background: rgb(0, 121, 191);
+  border-radius: 15px;
 }
 #cal .number-bgc.pt,
 #cal .number.pt,
 #cal .number-pre.pt {
   background: rgb(95, 180, 112);
+  border-radius: 15px;
 }
 #cal .number-bgc.study,
 #cal .number.study,
 #cal .number-pre.study {
   background: rgb(255, 111, 97);
+  border-radius: 15px;
 }
 
 #cal .container .number:hover,
@@ -896,9 +956,13 @@ nav .fas {
     padding: 0;
   }
 
-  .contact-right,
-  .contact-left {
+  .contact-left,
+  .contact-right {
     width: 100%;
+  }
+
+  #cal {
+    display: none;
   }
 }
 

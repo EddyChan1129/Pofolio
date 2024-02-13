@@ -8,6 +8,9 @@
     <link rel="shortcut icon" href="./images/logo.png">
     <title>Eddy Website</title>
 
+
+
+
     <!-- Google Fonts style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,12 +43,11 @@
                     <h1 class="sub-title">Contact Me</h1>
                     <p><i class="fa-solid fa-envelope"></i>22026266d@connect.polyu.hk</p>
                     <p><i class="fa-solid fa-phone"></i> (852) 9716 6524</p>
-
                     <section id="cal">
                         <div class="container">
                             <div class="date">
                                 <div class="days">
-                                    <h3>Schedule: Feb 2024</h3>
+                                    <h3>My Schedule: Feb</h3>
                                     <div class="day">Su</div>
                                     <div class="day">Mo</div>
                                     <div class="day">Tu</div>
@@ -106,16 +108,32 @@
                         <input type="text" name="Name" placeholder="Enter Your Name Here..." required>
                         <input type="email" name="Email" placeholder="Enter Your Email Here..." required>
                         <textarea name="Message" rows="3" placeholder="Enter Your Message Here..."></textarea>
-                        <button type="submit" class="btn btn2">SEND MESSAGE</button>
+                        <button type="submit" id="sub-btn">
+                            <div id="all-btn">
+                                <a class="button">
+                                    <svg height="50" width="200">
+                                        <rect class="shape" height="50" width="200" />
+                                        <div class="text"> Send message </div>
+                                    </svg>
+                                </a>
+                            </div>
+                        </button>
                     </form>
-
+                    <p id="sent-msg"> Message is Sent</p>
+                    <span id="loading">Loading...</span>
                 </div>
             </div>
         </div>
 
+
     </div>
+
+
     <script>
         var sidemenu = document.getElementById("sidemenu");
+        const sent_msg = document.getElementById("sent-msg");
+        const sub_btn = document.getElementById("sub-btn");
+        const loading = document.getElementById("loading");
         function openmenu() {
             sidemenu.style.right = "0";
         }
@@ -127,9 +145,23 @@
         const form = document.forms['submit-to-google-sheet'];
 
         form.addEventListener('submit', e => {
+            sub_btn.style.display = "none";
+            loading.style.display = "block";
+            loading.addClass = "load";
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => console.log('Success!', response))
+                .then(response => {
+                    console.log('Success!', response);
+                    sent_msg.style.display = "block";
+                    loading.style.display = "none";
+
+                    setTimeout(function () {
+                        sub_btn.style.display = "block";
+                        sent_msg.style.display = "none";
+                        form.reset();
+                    }, 2000);
+
+                })
                 .catch(error => console.error('Error!', error.message))
         })
     </script>
