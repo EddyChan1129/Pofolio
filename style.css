@@ -158,6 +158,8 @@ nav ul li a:hover::after {
 .header-content {
   display: flex;
   justify-content: space-evenly;
+  background: transparent;
+  backdrop-filter: blur(10px);
 }
 
 .header-text-container {
@@ -224,15 +226,26 @@ nav ul li a:hover::after {
   margin-top: 3%;
 }
 
+#about #all-btn {
+  width: 100%;
+  text-align: center;
+}
+
 .about-col-1 img {
   width: 400px;
   padding: 5% 5% 0;
   box-shadow: 0 0 20px var(--main-color);
+  background: transparent;
+  backdrop-filter: blur(10px);
 }
 
 .about-col-2 {
+  margin-left: 2%;
   width: 40%;
   padding: 5%;
+  background: transparent;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
 }
 
 .sub-title {
@@ -446,6 +459,8 @@ span.read-little {
 .skill-box p {
   width: 300px;
   padding: 20px;
+  background: transparent;
+  backdrop-filter: blur(10px);
   box-shadow: 0 0 20px var(--main-color);
 }
 
@@ -547,6 +562,8 @@ span.read-little {
 }
 
 .contact-left {
+  background: transparent;
+  backdrop-filter: blur(10px);
   width: 35%;
   display: flex;
   flex-direction: column;
@@ -577,6 +594,8 @@ span.read-little {
 }
 
 .contact-right form {
+  background: transparent;
+  backdrop-filter: blur(10px);
   width: 100%;
 }
 
@@ -610,7 +629,7 @@ form textarea {
   width: 100%;
   border: 0;
   outline: none;
-  background: #221a12;
+  background: #1a120a;
   padding: 1.5rem;
   margin: 1.5rem 0;
   color: #fff;
@@ -732,23 +751,39 @@ form .btn2 {
   margin: 0px auto;
   margin-top: 15px;
 }
-#cal .number-bgc.intern,
-#cal .number.intern,
-#cal .number-pre.intern {
-  background: rgb(0, 121, 191);
-  border-radius: 15px;
+input:focus,
+textarea:focus,
+input[type="date"] {
+  outline: none;
+  border: 1px solid var(--main-color);
 }
-#cal .number-bgc.pt,
-#cal .number.pt,
-#cal .number-pre.pt {
+#contact input[type="date"] {
+  width: 20rem;
+  background-color: #ff5e0069;
+  padding: 15px;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+::-webkit-calendar-picker-indicator {
+  background-color: #fff;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#cal .number.avaliable,
+#cal .number-pre.avaliable {
   background: rgb(95, 180, 112);
   border-radius: 15px;
 }
-#cal .number-bgc.study,
-#cal .number.study,
-#cal .number-pre.study {
-  background: rgb(255, 111, 97);
-  border-radius: 15px;
+
+#cal .number-bgc.avaliable {
+  background: rgb(95, 180, 112);
+  padding: 0.5rem 0;
+  width: 50%;
 }
 
 #cal .container .number:hover,

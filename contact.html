@@ -40,7 +40,7 @@
         <div class="container">
             <div class="row">
                 <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
+                    <h1 class="sub-title">TALK TO ME!</h1>
                     <p><i class="fa-solid fa-envelope"></i>22026266d@connect.polyu.hk</p>
                     <p><i class="fa-solid fa-phone"></i> (852) 9716 6524</p>
                     <section id="cal">
@@ -56,45 +56,43 @@
                                     <div class="day">Fr</div>
                                     <div class="day">Sa</div>
 
-                                    <div class="number-pre pt">28</div>
-                                    <div class="number-pre intern">29</div>
-                                    <div class="number-pre study">30</div>
-                                    <div class="number-pre study">31</div>
-                                    <div class="number study">1</div>
-                                    <div class="number">2</div>
-                                    <div class="number pt">3</div>
-                                    <div class="number pt">4</div>
+                                    <div class="number-pre ">28</div>
+                                    <div class="number-pre ">29</div>
+                                    <div class="number-pre ">30</div>
+                                    <div class="number-pre ">31</div>
+                                    <div class="number ">1</div>
+                                    <div class="number avaliable">2</div>
+                                    <div class="number ">3</div>
+                                    <div class="number ">4</div>
                                     <div class="number">5</div>
-                                    <div class="number study">6</div>
-                                    <div class="number study">7</div>
-                                    <div class="number study">8</div>
-                                    <div class="number intern">9</div>
-                                    <div class="number pt">10</div>
-                                    <div class="number pt">11</div>
+                                    <div class="number avaliable">6</div>
+                                    <div class="number ">7</div>
+                                    <div class="number ">8</div>
+                                    <div class="number ">9</div>
+                                    <div class="number ">10</div>
+                                    <div class="number ">11</div>
                                     <div class="number">12</div>
                                     <div class="number">13</div>
-                                    <div class="number">14</div>
-                                    <div class="number intern">15</div>
-                                    <div class="number intern">16</div>
-                                    <div class="number pt">17</div>
-                                    <div class="number pt">18</div>
+                                    <div class="number avaliable">14</div>
+                                    <div class="number ">15</div>
+                                    <div class="number ">16</div>
+                                    <div class="number ">17</div>
+                                    <div class="number ">18</div>
                                     <div class="number">19</div>
-                                    <div class="number study">20</div>
-                                    <div class="number study">21</div>
-                                    <div class="number study">22</div>
-                                    <div class="number intern">23</div>
-                                    <div class="number pt">24</div>
-                                    <div class="number pt">25</div>
-                                    <div class="number intern">26</div>
-                                    <div class="number study">27</div>
-                                    <div class="number study">28</div>
-                                    <div class="number study">29</div>
+                                    <div class="number ">20</div>
+                                    <div class="number ">21</div>
+                                    <div class="number ">22</div>
+                                    <div class="number avaliable">23</div>
+                                    <div class="number ">24</div>
+                                    <div class="number ">25</div>
+                                    <div class="number ">26</div>
+                                    <div class="number ">27</div>
+                                    <div class="number ">28</div>
+                                    <div class="number avaliable">29</div>
                                     <div class="number-pre">1</div>
-                                    <div class="number-pre pt">2</div>
+                                    <div class="number-pre">2</div>
 
-                                    <div class="number-bgc intern">Intern</div>
-                                    <div class="number-bgc pt">Pt</div>
-                                    <div class="number-bgc study">study</div>
+                                    <div class="number-bgc avaliable">Available</div>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +105,10 @@
                     <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Enter Your Name Here..." required>
                         <input type="email" name="Email" placeholder="Enter Your Email Here..." required>
-                        <textarea name="Message" rows="3" placeholder="Enter Your Message Here..."></textarea>
+                        <input type="date" name="date" id="dateInput" class="date-input">
+
+                        <textarea name="Message" rows="3"
+                            placeholder="Tell me what you want to talk about with me..."></textarea>
                         <button type="submit" id="sub-btn">
                             <div id="all-btn">
                                 <a class="button">
@@ -128,8 +129,18 @@
 
     </div>
 
-
     <script>
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+        var yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+        document.getElementById("dateInput").value = today;
+    </script>
+    <script>
+
+
         var sidemenu = document.getElementById("sidemenu");
         const sent_msg = document.getElementById("sent-msg");
         const sub_btn = document.getElementById("sub-btn");
