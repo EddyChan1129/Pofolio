@@ -12,7 +12,7 @@
     <!-- Google Fonts style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/e0098116ea.js" crossorigin="anonymous"></script>
@@ -39,28 +39,15 @@
             <div class="row">
                 <div class="about-col-1">
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links " onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('lastest-project')">Lastest project</p>
                     </div>
                     <img src="./images/about-me.png">
                 </div>
                 <div class="about-col-2">
                     <div class="tab">
-                        <div class="tab-contents active-tab" id="education">
-                            <ul>
-                                <li>
-                                    <span>Jul, 2022 - Now</span>
-                                    <p>Computing - The Hong Kong Polytechnic University</p>
-                                </li>
-                                <li>
-                                    <span>Sep, 2020 - May, 2022 </span>
-                                    <p>Software Enginerring - Hong Kong Institute Vocational Education</p>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="tab-contents" id="experience">
+                        <div class="tab-contents active-tab" id="experience">
                             <ul>
                                 <li>
                                     <span>Jan, 2023 - Dec, 2023</span>
@@ -85,39 +72,55 @@
                             </ul>
 
                         </div>
-
-
-                        <div class="tab-contents" id="skills">
+                        <div class="tab-contents " id="education">
                             <ul>
                                 <li>
-                                    <span>Web Design</span>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In quasi magnam cum
-                                        debitis neque iste laboriosam facere dicta fugit eaque sit architecto, et ut
-                                        est
-                                        odio quibusdam accusamus. Amet, ullam!
-                                    </p>
+                                    <span>Jul, 2022 - Now</span>
+                                    <p class="school-name">The Hong Kong Polytechnic University</p>
+                                    <p>Major : Computing <br><br> Programming Languages Experienced: <br>
+                                        C, C++, SQL, NoSQL, MongoDB, React</p>
                                 </li>
-                                <li><span>Web Design</span>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In quasi magnam cum
-                                        debitis neque iste laboriosam facere dicta fugit eaque sit architecto, et ut est
-                                        odio quibusdam accusamus. Amet, ullam!</p>
-                                </li>
-                                <li><span>Web Design</span>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In quasi magnam cum
+                                <li>
+                                    <span>Sep, 2020 - May, 2022 </span>
+                                    <p class="school-name"> Hong Kong Institute Vocational Education</p>
+                                    <p>Major Software Enginerring <br><br> Programming Languages Experienced:
+                                        <br>
+                                        HTML, CSS, JavaScript, PHP, JSP, Python, Java, SQL
                                     </p>
+
+                                </li>
+                            </ul>
+                        </div>
+
+
+
+                        <div class="tab-contents" id="lastest-project">
+                            <ul>
+                                <li>
+                                    <span>Stock Prediction</span>
+                                    <p class="used-tech">Python,Flask, Machine Learning</p>
+                                    <p>Developed a stock prediction model using machine learning algorithms to predict
+                                        stock prices.</p>
+                                </li>
+                                <li>
+                                    <span>Face Registration System</span>
+                                    <p class="used-tech"> React, OpenCV, MongoDB</p>
+                                    <p>Developed a face registration system using OpenCV and React to register and
+                                        recognize faces.</p>
+
+                                </li>
+                                <li>
+                                    <span>Tutoring Agency Website</span>
+                                    <p class="used-tech">HTML, CSS, JavaScript, PHP, MySQL</p>
+                                    <p>Developed a website for a tutoring agency using HTML, CSS, JavaScript, PHP, and
+                                        MySQL.</p>
+
                                 </li>
                             </ul>
                         </div>
 
                     </div>
-                    <div id="all-btn">
-                        <a class="button">
-                            <svg height="50" width="200">
-                                <rect class="shape" height="50" width="200" />
-                                <div class="text">View More</div>
-                            </svg>
-                        </a>         
-                    </div>
+
                 </div>
             </div>
         </div>

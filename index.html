@@ -9,7 +9,7 @@
         Eddy Website
     </title>
 
-    <link rel="shortcut icon" href="./images/logo2.png">
+    <link rel="shortcut icon" href="./images/logo.png">
 
     <!-- Google Fonts style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,15 +51,18 @@
                             <h1>Eddy CHAN</h1>
                             <p>And I'm</p>
                             <span class="multiple-text"></span>
+                            <div id="home-btn">
+                                <a class="button">
+                                    <svg>
+                                        <rect class="shape" />
+                                        <div class="text"> More</div>
+                                    </svg>
+                                </a>         
+                            </div>
                         </div>
-                        <div id="all-btn">
-                            <a class="button">
-                                <svg height="50" width="200">
-                                    <rect class="shape" height="50" width="200" />
-                                    <div class="text">View More</div>
-                                </svg>
-                            </a>         
-                        </div>
+
+
+
                     </div>
                 </div>
 
@@ -68,7 +71,7 @@
         </div>
     </div>
     <script>
-        document.querySelector('#all-btn .button').addEventListener('click', function () {
+        document.querySelector('.button').addEventListener('click', function () {
             window.location.href = './about.html';
         });
 

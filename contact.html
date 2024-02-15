@@ -105,20 +105,17 @@
                     <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Enter Your Name Here..." required>
                         <input type="email" name="Email" placeholder="Enter Your Email Here..." required>
-                        <input type="date" name="date" id="dateInput" class="date-input">
-
                         <textarea name="Message" rows="3"
                             placeholder="Tell me what you want to talk about with me..."></textarea>
-                        <button type="submit" id="sub-btn">
-                            <div id="all-btn">
-                                <a class="button">
-                                    <svg height="50" width="200">
-                                        <rect class="shape" height="50" width="200" />
-                                        <div class="text"> Send message </div>
-                                    </svg>
-                                </a>
-                            </div>
-                        </button>
+                        <input type="date" name="date" id="dateInput" class="date-input">
+                        <div> <button class="button" type="submit" id="contact-btn">
+                                <svg height="50" width="200">
+                                    <rect class="shape" height="50" width="200" />
+                                    <div class="text" style="margin:0 auto;"> Send </div>
+                                </svg>
+                            </button></div>
+
+
                     </form>
                     <p id="sent-msg"> Message is Sent</p>
                     <span id="loading">Loading...</span>
@@ -140,10 +137,9 @@
     </script>
     <script>
 
-
         var sidemenu = document.getElementById("sidemenu");
         const sent_msg = document.getElementById("sent-msg");
-        const sub_btn = document.getElementById("sub-btn");
+        const sub_btn = document.getElementById("contact-btn");
         const loading = document.getElementById("loading");
         function openmenu() {
             sidemenu.style.right = "0";
