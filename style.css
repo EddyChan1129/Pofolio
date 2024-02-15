@@ -675,6 +675,7 @@ span.read-little {
 
 .contact-left p {
   margin-top: 3rem;
+  color: var(--text-color);
 }
 
 .contact-left p i {
