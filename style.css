@@ -774,6 +774,9 @@ input[type="date"] {
   border: 1px solid var(--main-color);
 }
 #contact input[type="date"] {
+  font-size: small;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
   color: grey;
   border: none;
   outline: none;
