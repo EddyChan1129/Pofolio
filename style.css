@@ -64,6 +64,11 @@ nav {
   text-transform: uppercase;
   text-decoration: none;
   position: relative;
+  animation-name: elegantAnimationDownTop;
+  animation-duration: 2s;
+  animation-timing-function: ease; /* Smooth start and end */
+  animation-iteration-count: 1; /* Loop the animation */
+  animation-direction: alternate; /* Makes the animation reverse direction */
 }
 
 .shape {
@@ -115,6 +120,11 @@ nav {
 
 .logo {
   width: 80px;
+  animation-name: elegantAnimationTopDown;
+  animation-duration: 2s;
+  animation-timing-function: ease; /* Smooth start and end */
+  animation-iteration-count: 1; /* Loop the animation */
+  animation-direction: alternate;
 }
 
 nav ul li {
@@ -122,6 +132,11 @@ nav ul li {
   list-style: none;
   margin: 1rem 2rem;
   text-shadow: 0 0 2px var(--text-color);
+  animation-name: elegantAnimationTopDown;
+  animation-duration: 2s;
+  animation-timing-function: ease; /* Smooth start and end */
+  animation-iteration-count: 1; /* Loop the animation */
+  animation-direction: alternate; /* Makes the animation reverse direction */
 }
 
 nav ul li a {
@@ -188,6 +203,14 @@ nav ul li a:hover::after {
   text-shadow: 0 0 5px var(--text-color);
 }
 
+.header-text h1 {
+  animation-name: elegantAnimationTopDown;
+  animation-duration: 2s;
+  animation-timing-function: ease; /* Smooth start and end */
+  animation-iteration-count: 1; /* Loop the animation */
+  animation-direction: alternate; /* Makes the animation reverse direction */
+}
+
 .header-text p {
   color: var(--text-color);
   font-size: 2.2rem;
@@ -202,6 +225,11 @@ nav ul li a:hover::after {
 
 .header-img {
   margin-top: 5%;
+  animation-name: elegantAnimationLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out; /* Smooth start and end */
+  animation-iteration-count: 1; /* Loop the animation */
+  animation-direction: alternate; /* Makes the animation reverse direction smoothly */
 }
 
 .header-img img {
@@ -238,6 +266,11 @@ nav ul li a:hover::after {
 
 #about h1 {
   margin-top: 3%;
+  animation-name: elegantAnimationTopDown;
+  animation-duration: 2s;
+  animation-timing-function: ease; /* Smooth start and end */
+  animation-iteration-count: calc(1); /* Loop the animation */
+  animation-direction: alternate; /* Makes the animation reverse direction smoothly */
 }
 
 .about-col-1 img {
@@ -246,6 +279,11 @@ nav ul li a:hover::after {
   box-shadow: 0 0 20px var(--main-color);
   background: transparent;
   backdrop-filter: blur(10px);
+  animation-name: elegantAnimationLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease; /* Smooth start and end */
+  animation-iteration-count: 1; /* Loop the animation */
+  animation-direction: alternate;
 }
 
 .about-col-2 {
@@ -255,6 +293,11 @@ nav ul li a:hover::after {
   background: transparent;
   border-radius: 20px;
   backdrop-filter: blur(10px);
+  animation-name: elegantAnimationLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease; /* Smooth start and end */
+  animation-iteration-count: 1; /* Loop the animation */
+  animation-direction: alternate;
 }
 
 .sub-title {
@@ -284,6 +327,11 @@ nav ul li a:hover::after {
   font-weight: 600;
   cursor: pointer;
   position: relative;
+  animation-name: elegantAnimationDownTop;
+  animation-duration: 2s;
+  animation-timing-function: ease; /* Smooth start and end */
+  animation-iteration-count: 1; /* Loop the animation */
+  animation-direction: alternate;
 }
 
 .tab-links::after {
@@ -367,8 +415,13 @@ nav ul li a:hover::after {
   width: 42rem;
   margin: 5rem;
   transition: 0.9s;
-  box-shadow: var(--main-color) 0px 3px 3px,
-    rgba(241, 22, 22, 0.973) 0px 10px 10px;
+  box-shadow: var(--main-color) 0px 3px 3px, rgba(2, 0, 0, 0.973) 0px 10px 10px;
+
+  animation-name: FadeIn;
+  animation-duration: 2s;
+  animation-timing-function: ease; /* Smooth start and end */
+  animation-iteration-count: 1; /* Loop the animation */
+  animation-direction: alternate;
 }
 
 .blog-img {
@@ -384,12 +437,11 @@ nav ul li a:hover::after {
 }
 
 .blog-text {
-  background: var(--background-color);
   color: var(--text-color);
-  backdrop-filter: blur(50px);
   padding: 30px;
   display: flex;
   flex-direction: column;
+  background-color: var(--background-color);
 }
 
 .blog-text span {
@@ -444,6 +496,11 @@ span.read-little {
   padding: 1.6rem;
   position: relative;
   font-size: large;
+  animation-name: elegantAnimationTopDown;
+  animation-duration: 2s;
+  animation-timing-function: ease; /* Smooth start and end */
+  animation-iteration-count: 1; /* Loop the animation */
+  animation-direction: alternate;
 }
 
 .skill-header::after {
@@ -482,6 +539,11 @@ span.read-little {
   letter-spacing: 0.1rem;
   line-height: 2rem;
   text-align: justify;
+  animation-name: elegantAnimationLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease; /* Smooth start and end */
+  animation-iteration-count: 1; /* Loop the animation */
+  animation-direction: alternate;
 }
 .skill-box p {
   width: 300px;
@@ -492,6 +554,11 @@ span.read-little {
 }
 
 .skill-title h3 {
+  animation-name: FadeIn;
+  animation-duration: 2s;
+  animation-timing-function: ease; /* Smooth start and end */
+  animation-iteration-count: 1; /* Loop the animation */
+  animation-direction: alternate;
   color: var(--text-color);
   margin: 2rem 0 0 0;
 }
@@ -551,6 +618,11 @@ span.read-little {
   align-items: center;
   transition: 0.5s;
   box-shadow: 0 0 20px var(--main-color);
+  animation-name: elegantAnimationDownTop;
+  animation-duration: 2s;
+  animation-timing-function: ease; /* Smooth start and end */
+  animation-iteration-count: 1; /* Loop the animation */
+  animation-direction: alternate;
 }
 
 /*------------------------contact-------------------------------*/
@@ -583,6 +655,11 @@ span.read-little {
   width: 35%;
   display: flex;
   flex-direction: column;
+  animation-name: elegantAnimationLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease; /* Smooth start and end */
+  animation-iteration-count: 1; /* Loop the animation */
+  animation-direction: alternate;
 }
 
 .contact-right {
@@ -590,6 +667,11 @@ span.read-little {
   display: flex;
   flex-direction: column;
   align-items: left;
+  animation-name: FadeIn;
+  animation-duration: 2s;
+  animation-timing-function: ease; /* Smooth start and end */
+  animation-iteration-count: 1; /* Loop the animation */
+  animation-direction: alternate;
 }
 
 .contact-left p {
@@ -1013,5 +1095,51 @@ nav .fas {
   }
   .skill-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@keyframes elegantAnimationTopDown {
+  0% {
+    transform: translateY(-25%);
+    opacity: 0.3; /* Starting slightly transparent */
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1; /* Ending slightly transparent */
+  }
+}
+
+@keyframes elegantAnimationDownTop {
+  0% {
+    transform: translateY(25%);
+    opacity: 0.3; /* Starting slightly transparent */
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1; /* Ending slightly transparent */
+  }
+}
+
+@keyframes elegantAnimationLeft {
+  0% {
+    transform: translateX(-5%);
+    opacity: 0.1; /* Starting slightly transparent */
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1; /* Ending slightly transparent */
+  }
+}
+
+@keyframes FadeIn {
+  0% {
+    transform: translateY(10px);
+    opacity: 0.1; /* Starting slightly transparent */
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1; /* Ending slightly transparent */
   }
 }
