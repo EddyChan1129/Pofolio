@@ -964,17 +964,8 @@ nav .fas {
   }
 
   .tab-links {
-    background-color: transparent;
     font-size: 1.2rem;
-    fill: blur(100px);
-    transition: 0.3s ease-in-out all;
   }
-
-  .tab-links:hover {
-    font-size: 1.5rem;
-    fill: blur(100px);
-  }
-
   .tab-links::after {
     bottom: -3px;
   }
