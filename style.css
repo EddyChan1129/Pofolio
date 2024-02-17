@@ -399,10 +399,6 @@ nav ul li a:hover::after {
 }
 /***************************** Blog ********************************/
 
-.blog-box:hover {
-  transform: translateY(-20px);
-}
-
 .blog-container {
   padding: 0 6%;
   display: flex;
@@ -412,20 +408,32 @@ nav ul li a:hover::after {
 }
 
 .blog-box {
-  width: 42rem;
+  overflow: hidden;
+  border-radius: 50px;
+  width: 40rem;
   margin: 5rem;
   transition: 0.9s;
-  box-shadow: var(--main-color) 0px 3px 3px, rgba(2, 0, 0, 0.973) 0px 10px 10px;
-
+  box-shadow: rgba(218, 208, 208, 0.973) 0px 5px 10px,
+    var(--main-color) 0px 1px 10px;
   animation-name: FadeIn;
   animation-duration: 2s;
-  animation-timing-function: ease; /* Smooth start and end */
+  animation-timing-function: ease-in-out; /* Smooth start and end */
   animation-iteration-count: 1; /* Loop the animation */
   animation-direction: alternate;
 }
 
+.blog-box:hover {
+  transform: translateY(-10px);
+}
+
+.blog-box:hover > .blog-img img {
+  transform: scale(1.1);
+}
+
 .blog-img {
-  height: 25rem;
+  overflow: hidden;
+  border-bottom: 0.2rem solid rgba(218, 208, 208, 0.973);
+  height: 30rem;
 }
 
 .blog-img img {
@@ -433,6 +441,7 @@ nav ul li a:hover::after {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transition: 0.5s ease-in-out;
 }
 
 .blog-text {
